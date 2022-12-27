@@ -1,0 +1,48 @@
+@use "../scss/responsive" as r;
+@use "config/fonts" as f;
+
+footer {
+  nav {
+    display: flex;
+    padding: 20px 0;
+
+    @include r.mq(pc) {
+      justify-content: space-between;
+    }
+    @include r.mq(tab) {
+      justify-content: space-between;
+    }
+
+    @include r.mq(sp) {
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .logo {
+      width: 84px;
+    }
+    ul {
+      display: flex;
+      margin-bottom: 10px;
+      @include r.mq(sp) {
+        justify-content: space-between;
+      }
+
+      li {
+        @include r.mq(pc) {
+          margin-right: 32px;
+        }
+        @include r.mq(tab) {
+          margin-right: 12px;
+        }
+        @include r.mq(sp) {
+          margin-right: 12px;
+        }
+
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

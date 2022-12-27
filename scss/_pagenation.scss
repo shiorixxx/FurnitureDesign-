@@ -1,0 +1,32 @@
+@use "../scss/responsive" as r;
+@use "config/fonts" as f;
+.Pagenation-Container {
+  padding: 46px 0;
+}
+.Pagenation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .Pagenation-item-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 35px;
+    height: 35px;
+    background: #fff;
+    transition: all 0.15s linear;
+  }
+  .Pagenation-item-link.is-active {
+    pointer-events: none;
+    background: #111;
+    color: #fff;
+  }
+  .Pagenation-item-link {
+    &:not(.is-active):hover {
+      background: #111;
+      color: #fff;
+    }
+  }
+}

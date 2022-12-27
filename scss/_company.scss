@@ -1,0 +1,63 @@
+@use "../scss/responsive" as r;
+@use "config/fonts" as f;
+
+.company {
+  width: 100%;
+  .company-textarea {
+    margin-bottom: 44px;
+    dl {
+      text-align: left;
+      font-size: 1.4rem;
+
+      @include r.mq(pc) {
+        width: 50%;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      dt {
+        font-weight: normal;
+        padding: 24px 0 24px 10px;
+
+        @include r.mq(pc) {
+          width: 40%;
+          border-bottom: 1px solid #dcdbdb;
+        }
+
+        @include r.mq(sp) {
+          padding: 23px 0 0 10px;
+        }
+      }
+      dd {
+        border-bottom: 1px solid #dcdbdb;
+        padding: 24px 0 24px 10px;
+
+        @include r.mq(pc) {
+          width: 60%;
+          padding: 24px 0 24px 10px;
+        }
+        @include r.mq(sp) {
+          &:last-child {
+            border: none;
+          }
+        }
+      }
+    }
+  }
+}
+.map {
+  margin: 0 auto 181px 0;
+
+  @include r.mq(pc) {
+    width: 600px;
+  }
+  @include r.mq(tab) {
+    width: 600px;
+  }
+  @include r.mq(sp) {
+    width: 100%;
+  }
+  iframe {
+    filter: grayscale(100%);
+    width: 100%;
+  }
+}

@@ -1,0 +1,47 @@
+/* _base.scssは、Webサイト全体のベースになるスタイルや、リセットCSSでリセットしたスタイルの調整をするファイル。 */
+@use "config/fonts" as f;
+@use "../scss/responsive" as r;
+
+/* ============================================
+ Base Style
+===============================================*/
+html {
+  transition-duration: 1s;
+  transition-property: opacity;
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  // font-family: serif;
+  font-weight: 400;
+  height: 1.6;
+}
+img {
+  width: 100%;
+}
+
+p {
+  font-size: 1.6rem;
+}
+.wrapper {
+  max-width: 1360px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0 40px;
+
+  @include r.mq(sp) {
+    padding: 0 40px;
+  }
+}
+.page-name {
+  text-align: left;
+  font-size: 1.4rem;
+  margin-bottom: 33px;
+}
+.link {
+  font-size: 1.4rem;
+  display: block;
+  padding: 39px 10px;
+  cursor: pointer;
+}

@@ -1,0 +1,70 @@
+@use "config/fonts" as f;
+@use "../scss/responsive" as r;
+
+.item {
+  .Item-container {
+    display: flex;
+    text-align: left;
+    @include r.mq(pc) {
+      flex-direction: row;
+    }
+    @include r.mq(tab) {
+      flex-direction: column;
+    }
+    @include r.mq(sp) {
+      flex-direction: column;
+    }
+
+    .Item-img {
+      @include r.mq(pc) {
+        margin-right: 64px;
+        width: 600px;
+      }
+      @include r.mq(tab) {
+        margin-bottom: 33px;
+        width: 100%;
+      }
+      @include r.mq(sp) {
+        flex-direction: column;
+        width: 100%;
+      }
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .Item-discription {
+      @include r.mq(pc) {
+        width: 350px;
+      }
+      @include r.mq(tab) {
+        width: 100%;
+      }
+      @include r.mq(sp) {
+        width: 100%;
+      }
+      .text {
+        line-height: 2;
+        margin-bottom: 26px;
+      }
+      .price {
+        margin-bottom: 34px;
+      }
+      dl {
+        display: flex;
+        width: 200px;
+        flex-wrap: wrap;
+        dt {
+          width: 40%;
+          font-weight: normal;
+          margin-bottom: 4px;
+        }
+        dd {
+          width: 60%;
+          margin-bottom: 4px;
+        }
+      }
+    }
+  }
+}

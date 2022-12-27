@@ -1,0 +1,47 @@
+@use "../scss/responsive" as r;
+@use "config/fonts" as f;
+
+.products {
+  ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    @include r.mq(pc) {
+      grid-row-gap: 42px; //行のマージン
+      grid-column-gap: 35px; //列のマージン
+    }
+
+    @include r.mq(tab) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-row-gap: 30px; //行のマージン
+      grid-column-gap: 20px; //列のマージン
+    }
+
+    @include r.mq(sp) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-row-gap: 24px; //行のマージン
+      grid-column-gap: 17px; //列のマージン
+    }
+  }
+  .product-img {
+    margin-bottom: 12.6px;
+  }
+  //Textarea
+  dl {
+    text-align-last: left;
+
+    dt {
+      font-weight: normal;
+
+      @include r.mq(pc) {
+        margin-bottom: 8px;
+      }
+      @include r.mq(tab) {
+        margin-bottom: 6px;
+      }
+      @include r.mq(sp) {
+        margin-bottom: 6px;
+      }
+    }
+  }
+}
